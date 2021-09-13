@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "53734799073",
+    "project_id": "cinematech-9f5a5",
+    "storage_bucket": "cinematech-9f5a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53734799073:android:1fba46650efc6461d329a0",
+        "android_client_info": {
+          "package_name": "br.com.setcodeready.cinematech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53734799073-r8iik7ihadledbjb98t54tej391m6fe6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.setcodeready.cinematech",
+            "certificate_hash": "31791213ec1a70fe5100b2e0b1178f3eafc69780"
+          }
+        },
+        {
+          "client_id": "53734799073-o7u6n4brl0027omlims0qhsd548tlgef.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4veEfg_jAfnVjElWT8-jDf0KNIttLS24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53734799073-o7u6n4brl0027omlims0qhsd548tlgef.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
