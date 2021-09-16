@@ -36,6 +36,7 @@ dependencies:
   firebase_remote_config: ^0.11.0
   flutter_signin_button: ^2.0.0
   google_sign_in: ^5.1.0
+  fluttericon: ^2.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -80,10 +81,17 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: CinematechAppIcons
+      fonts:
+        - asset: assets/fonts/CinematechAppIcons.ttf
+
+    - family: Metropolis
+      fonts:
+        - asset: assets/fonts/metropolis/Metropolis-Regular.otf
+        - asset: assets/fonts/metropolis/Metropolis-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/metropolis/Metropolis-Bold.otf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

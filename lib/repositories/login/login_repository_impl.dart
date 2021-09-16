@@ -20,4 +20,10 @@ class LoginRepositoryImpl implements LoginRepository {
 
     return FirebaseAuth.instance.signInWithCredential(credential);
   }
+
+  @override
+  Future<void> logout() async {
+    await GoogleSignIn().signOut();
+    FirebaseAuth.instance.signOut();
+  }
 }
