@@ -2,6 +2,7 @@ import 'package:cinematech/application/ui/cinematech_app_icons_icons.dart';
 import 'package:cinematech/application/ui/theme_extensions.dart';
 import 'package:cinematech/modules/favorites/favorites_page.dart';
 import 'package:cinematech/modules/home/home_controller.dart';
+import 'package:cinematech/modules/movies/movies_bindings.dart';
 import 'package:cinematech/modules/movies/movies_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -35,6 +36,7 @@ class HomePage extends GetView<HomeController> {
             return GetPageRoute(
               settings: settings,
               page: () => MoviesPage(),
+              binding: MoviesBindings(),
             );
           }
 
