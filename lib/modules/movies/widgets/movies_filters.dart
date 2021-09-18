@@ -14,8 +14,10 @@ class MoviesFilters extends GetView<MoviesController> {
         child: Obx(() {
           return Row(
             children: controller.genres
-                .map((genre) =>
-                    FilterTag(model: genre, onPressed: () {}, selected: false))
+                .map((genre) => FilterTag(
+                    model: genre,
+                    onPressed: () => controller.filterMoviesByGenre(genre),
+                    selected: controller.genreSelected.value?.id == genre.id))
                 .toList(),
           );
         }));

@@ -1,8 +1,12 @@
+import 'package:cinematech/models/movie_model.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import '../cinematech_app_icons_icons.dart';
 
 class MovieCard extends StatelessWidget {
-  const MovieCard({Key? key}) : super(key: key);
+  final dateFormat = DateFormat('y');
+  final MovieModel movie;
+  MovieCard({Key? key, required this.movie}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,18 +25,15 @@ class MovieCard extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   clipBehavior: Clip.antiAlias,
-                  child: Image.network(
-                      'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRlB-DtWktjvIMFsIHyX_fGSJjhKemQfo8A1eyUV9CuMKCCjVez',
-                      width: 148,
-                      height: 184,
-                      fit: BoxFit.cover),
+                  child: Image.network(movie.posterPath,
+                      width: 148, height: 184, fit: BoxFit.cover),
                 ),
               ),
               SizedBox(
                 height: 10,
               ),
               Text(
-                'Warcraft',
+                movie.title,
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w600,
@@ -41,7 +42,7 @@ class MovieCard extends StatelessWidget {
                 maxLines: 2,
               ),
               Text(
-                '2019',
+                dateFormat.format(DateTime.parse(movie.releaseDate)),
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w300,
