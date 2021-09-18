@@ -1,9 +1,10 @@
 import 'package:cinematech/application/ui/widgets/movie_card.dart';
 import 'package:cinematech/models/movie_model.dart';
+import 'package:cinematech/modules/movies/movies_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class MoviesGroup extends StatelessWidget {
+class MoviesGroup extends GetView<MoviesController> {
   final String title;
   final List<MovieModel> movies;
   const MoviesGroup({Key? key, required this.title, required this.movies})
@@ -29,7 +30,11 @@ class MoviesGroup extends StatelessWidget {
               shrinkWrap: true,
               itemCount: movies.length,
               itemBuilder: (content, index) {
-                return MovieCard(movie: movies[index]);
+                var movie = movies[index];
+                return MovieCard(
+                  movie: movie,
+                  favoriteCallback: () => controller.favoriteMovie(movie),
+                );
               },
             );
           }),

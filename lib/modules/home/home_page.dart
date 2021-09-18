@@ -1,5 +1,6 @@
 import 'package:cinematech/application/ui/cinematech_app_icons_icons.dart';
 import 'package:cinematech/application/ui/theme_extensions.dart';
+import 'package:cinematech/modules/favorites/favorites_binding.dart';
 import 'package:cinematech/modules/favorites/favorites_page.dart';
 import 'package:cinematech/modules/home/home_controller.dart';
 import 'package:cinematech/modules/movies/movies_bindings.dart';
@@ -44,6 +45,7 @@ class HomePage extends GetView<HomeController> {
             return GetPageRoute(
               settings: settings,
               page: () => FavoritesPage(),
+              binding: FavoritesBinding(),
             );
           }
 
